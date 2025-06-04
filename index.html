@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Esheshwari Kumari | Portfolio</title>
   <style>
+    /* Basic reset and fonts */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f5f7fa;
       color: #222;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       line-height: 1.5;
+      scroll-behavior: smooth; /* Enables smooth scrolling */
     }
     header {
       background-color: #0a66c2;
       color: white;
-      padding: 2rem 1.5rem;
+      padding: 1.5rem 1rem;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     header h1 {
       margin: 0.2rem 0;
@@ -27,34 +33,34 @@
     header p {
       font-size: 1.1rem;
       font-weight: 500;
-      margin: 0.5rem 0 0;
+      margin: 0.3rem 0 0;
     }
-
-  nav {
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-  padding: 0.5rem 1rem;
-}
-.navbar {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  gap: 1.2rem;
-}
-.navbar li a {
-  text-decoration: none;
-  color: #0a66c2;
-  font-weight: 600;
-  padding: 0.4rem 0.8rem;
-  border-radius: 10px;
-  transition: background 0.2s ease;
-}
-.navbar li a:hover {
-  background-color: #e1eefa;
-}
+    /* Navigation styles */
+    nav {
+      margin-top: 1rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #084a9e;
+    }
 
     main {
       max-width: 960px;
@@ -62,58 +68,100 @@
       padding: 0 1rem;
     }
     section {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    section:last-child {
+      border-bottom: none;
     }
     h2 {
       color: #0a66c2;
-      border-bottom: 2px solid #0a66c2;
+      border-bottom: 3px solid #0a66c2;
       padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-weight: 700;
+      font-size: 2rem;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
     }
-    li {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
-    .tech-stack, .projects {
+    /* Tech Stack */
+    .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 0.7rem;
     }
-    .tech-item, .project-item {
+    .tech-item {
       background-color: #e1eefa;
       color: #0a66c2;
-      padding: 0.4rem 0.8rem;
+      padding: 0.4rem 1rem;
       border-radius: 20px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 1rem;
       user-select: none;
     }
-    .contact-links a {
+    /* Expertise list */
+    ul.expertise-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      font-size: 1.1rem;
+    }
+    /* Projects */
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .project-item {
+      background-color: #e9f0ff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .project-item h3 {
+      margin: 0 0 0.3rem;
+      color: #084a9e;
+    }
+    /* Connect section */
+    .connect-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .connect-links a {
       display: inline-block;
-      margin-right: 1rem;
+      text-align: center;
       color: #0a66c2;
       font-weight: 600;
       text-decoration: none;
+      transition: transform 0.3s ease;
     }
-    .contact-links a:hover {
-      text-decoration: underline;
+    .connect-links a:hover,
+    .connect-links a:focus {
+      transform: scale(1.1);
     }
-    footer {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      background-color: #0a66c2;
-      color: white;
-      font-weight: 500;
-      margin-top: 4rem;
+    .connect-links img {
+      display: block;
+      margin: 0 auto 0.3rem;
+      width: 40px;
+      height: 40px;
     }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      .tech-stack, .projects {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .tech-stack {
         flex-direction: column;
+      }
+      .connect-links {
+        gap: 1rem;
       }
     }
   </style>
@@ -124,38 +172,23 @@
   <h1>Esheshwari Kumari</h1>
   <p>Computer Science Undergrad · Data Science & AI Explorer · Topmate Expert</p>
   <p>Producer & Host of “The Auriseon Voice” (YouTube & Spotify Podcast) · Passionate Brand Technologist</p>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#stack">Tech Stack</a></li>
+      <li><a href="#expertise">Expertise</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
 </header>
 
-  <nav>
-  <ul class="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="intro.html">Intro</a></li>
-    <li><a href="background.html">Background</a></li>
-    <li><a href="stack.html">Tech Stack</a></li>
-    <li><a href="expertise.html">Expertise</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="connect.html">Connect</a></li>
-  </ul>
-</nav>
-
 <main>
-  <section>
-    <h2>👨‍💻 Software Development Projects</h2>
-    <ul class="projects">
-      <li class="project-item">Data Structures and Algorithms Practice (AlgoExpert) — Practicing DS & Algos in Python</li>
-      <li class="project-item">Operating Systems — Beginner, Intermediate & Advanced Projects</li>
-      <li class="project-item">Linux Administration — Beginner, Intermediate & Advanced Projects</li>
-      <li class="project-item">C (Desktop Applications) — Personal, Advanced, Open-source, system-level & Application Development Projects</li>
-      <li class="project-item">Python — Package Delivery Application (Data Visualization & DS & Algo Demo)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>📺 Web Development Projects</h2>
-    <ul class="projects">
-      <li class="project-item">Web Development — API Development and Integration</li>
-      <li class="project-item">Currency Converter Application</li>
-    </ul>
+  <section id="intro" tabindex="-1">
+    <h2>Introduction</h2>
+    <p>Hello! I'm Esheshwari Kumari, a passionate Computer Science undergrad exploring Data Science, AI, and brand technology.
+      I enjoy building projects that solve real-world problems and sharing my insights with the community.</p>
   </section>
 
   <section id="tech-stack">
@@ -217,13 +250,55 @@
     </div>
   </section>
 
-  <section>
-    <h2>🤳 Connect with Me</h2>
-    <p class="contact-links">
-      <a href="https://topmate.io/esheshwari" target="_blank" rel="noopener noreferrer">Topmate</a> |
-      <a href="mailto:esheshwaritiwari@gmail.com">Email</a> |
-      <a href="https://linkedin.com/in/esheshwari" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </p>
+  <section id="expertise" tabindex="-1">
+    <h2>Expertise</h2>
+    <ul class="expertise-list">
+      <li>Data Science & Analytics</li>
+      <li>Machine Learning & AI Solutions</li>
+      <li>Full-Stack Web Development</li>
+      <li>Cloud Computing & DevOps</li>
+      <li>Brand Building & Personal Branding</li>
+    </ul>
+  </section>
+<section id="projects" tabindex="-1">
+  <h2>👨‍💻 Software Development Projects</h2>
+ <ul>
+    <li><strong>Data Structures and Algorithms Practice (AlgoExpert)</strong><br />
+        Practicing DS & Algos in Python</li>
+    <li><strong>Operating Systems</strong><br />
+        Beginner, Intermediate & Advanced Projects</li>
+    <li><strong>Linux Administration</strong><br />
+        Beginner, Intermediate & Advanced Projects</li>
+    <li><strong>C (Desktop Applications)</strong><br />
+        Personal, Advanced, Open-source, system-level and Application Development Projects</li>
+    <li><strong>Python</strong><br />
+        Package Delivery Application (Data Visualization & Data Structures & Algorithms Demo)</li>
+  </ul>
+
+  <h3>📺 Web Development Projects</h3>
+  <ul>
+    <li><strong>Web Development</strong><br />
+        API Development and Integration</li>
+    <li><strong>Currency Converter</strong></li>
+  </ul>
+</section>
+
+  <section id="connect" tabindex="-1">
+    <h2>Connect with Me</h2>
+  <div class="connect-icons">
+    <a href="https://www.linkedin.com/in/msesheshwari/" target="_blank" title="LinkedIn">
+      <img src="assets/images/linkedin logo.png" alt="LinkedIn" />
+    </a>
+    <a href="https://www.topmate.io/auriseon" target="_blank" title="Topmate">
+      <img src="assets/images/topmate logo.png" alt="Topmate" />
+    </a>
+    <a href="mailto:esheshwaritiwari@gmail.com" title="Email">
+      <img src="assets/images/email logo.jpg" alt="Email" />
+    </a>
+    <a href="https://github.com/Esheshwari" target="_blank">
+      <img src="assets/images/Github logo.jpg" alt="GitHub" width="40" height="40" />
+    </a>
+  </div>
   </section>
 </main>
 
@@ -233,3 +308,4 @@
 
 </body>
 </html>
+
