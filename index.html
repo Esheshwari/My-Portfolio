@@ -114,16 +114,16 @@
   }
 
   .tech-logos img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
-    transition: transform 0.2s ease;
-  }
+  width: 32px; /* Reduce size */
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+  transition: transform 0.2s ease;
+ }
 
-  .tech-logos img:hover {
-    transform: scale(1.1);
-  }
+.tech-logos img:hover {
+  transform: scale(1.1);
+ }
 
   /* Expertise list */
   ul.expertise-list {
@@ -180,6 +180,25 @@
     width: 40px;
     height: 40px;
   }
+
+  .connect-icons {
+  display: flex;
+  gap: 2rem; /* Adds space between icons */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+ }
+
+  .connect-icons img {
+  width: 40px; /* Adjust size */
+  height: 40px;
+  transition: transform 0.3s ease;
+ }
+
+.connect-icons img:hover,
+.connect-icons img:focus {
+  transform: scale(1.1);
+ }
 
   /* Responsive */
   @media (max-width: 600px) {
@@ -293,7 +312,7 @@
       <img src="assets/images/email logo.jpg" alt="Email" />
     </a>
    <a href="https://github.com/Esheshwari" target="_blank">
-  <img src="assets/images/Github logo.jpg" alt="GitHub Logo" width="40" height="40" />
+  <img src="assets/images/github logo.jpg" alt="GitHub Logo" width="40" height="40" />
   </a>
  </div>
  </section>
